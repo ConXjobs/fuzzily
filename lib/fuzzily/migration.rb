@@ -22,7 +22,7 @@ module Fuzzily
 
         def up
           create_table trigrams_table_name do |t|
-            t.string  :trigram, :limit => 3
+            t.string  :trigram, :limit => 4
             t.integer :score,   :limit => 2
             t.send trigrams_owner_id_column_type, :owner_id
             t.string  :owner_type
